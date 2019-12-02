@@ -86,3 +86,10 @@ Xml файл должен содержать id, kogus, arve, telija, kuupäev
 Сортировка "price" от меньшего к большему:
 
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/Fnwx7jm/H-iva3.png" alt="H-iva3" border="0"></a>
+
+Функции: 
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/r2y7d4R/5-UR-dcttpj-Y.jpg" alt="5-UR-dcttpj-Y" border="0"></a>
+
+
+<a href="https://ibb.co/85dd6tb"><img src="https://i.ibb.co/MVGGMQf/GCXVep2bv0o.jpg" alt="GCXVep2bv0o" border="0"></a>
