@@ -1,0 +1,31 @@
+﻿@model Task2.Models.Product
+
+@{
+    ViewBag.Title = "Add Product";
+}
+
+<h2>Edit Product</h2>
+<form action="?" method="post">
+    @Html.HiddenFor(model => model.Id)
+    <div>
+        <p>Product name</p>
+        @Html.EditorFor(model => model.Name)
+    </div>
+    <div>
+        <p>Product price</p>
+        <input type="number" value="@Model.Price" min="0" step=".01" name="Price" />
+    </div>
+    <div>
+        <p>Count on storage</p>
+        <input type="number" value="@Model.StorageCount" min="0" name="StorageCount" />
+    </div>
+    <div style="color: red; font-weight: bold;">
+        @foreach (string error in ViewBag.Errors)
+        {
+            <p>@error</p>
+        }
+    </div>
+    <input type="submit" value="Save" />
+    <a href="../../Admin/Products">Back</a>
+</form>
+

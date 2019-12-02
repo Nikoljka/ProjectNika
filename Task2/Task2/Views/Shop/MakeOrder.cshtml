@@ -1,0 +1,25 @@
+﻿@model Task2.Models.Product
+
+@{
+    ViewBag.Title = "Make Order";
+}
+
+<h2>Make Order</h2>
+
+<form action="?" method="post">
+    @Html.HiddenFor(model => model.Id)
+    <h3>Product: @Html.DisplayFor(model => model.Name)</h3>
+    <h3>Price: @Html.DisplayFor(model => model.Price)€</h3>
+    <h3>Count on storage: @Html.DisplayFor(model => model.StorageCount)</h3>
+    <div>
+        <p>Count to order</p>
+        <input type="number" value="1" min="1" max="@(Model.StorageCount)" name="StorageCount" />
+    </div>
+    <div style="color: red; font-weight: bold;">
+        @foreach (string error in ViewBag.Errors)
+        {
+            <p>@error</p>
+        }
+    </div>
+    <input type="submit" value="Order" />
+</form>

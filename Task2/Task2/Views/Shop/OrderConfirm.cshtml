@@ -1,0 +1,14 @@
+﻿@model Task2.Models.Order
+
+@{
+    ViewBag.Title = "Order Confirm";
+}
+
+<h2>Order Confirmed!</h2>
+<h2>Thanks for your order</h2>
+<h3>Product: @ViewBag.Product.Name</h3>
+<h3>Count: @Model.ProductCount</h3>
+<h3>Price per one: @ViewBag.Product.Price€</h3>
+<h3>Full price: @(ViewBag.Product.Price * Model.ProductCount)€</h3>
+<h3>Order time: @Model.OrderTime.ToString("dd-MM-yyyy hh:mm")</h3>
+<a href="../../Shop/Index">Back to product list</a>

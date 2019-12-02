@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+}
+
+<h2>Products</h2>
+<form action="?" method="get">
+    <div>
+        <p>Product name</p>
+        <input type="text" name="search" value="@ViewBag.Search" />
+    </div>
+    <div>
+        <p>Min price</p>
+        <input type="number" name="min" value="@ViewBag.Min" min="0" />
+    </div>
+    <div>
+        <p>Max price</p>
+        <input type="number" name="max" value="@ViewBag.Max" min="0" />
+    </div>
+    <input type="submit" value="Search" />
+</form>
+<p><a href="../../Admin/AddProduct">Add new</a></p>
+<div style="width: 90%; margin-left: auto; margin-right: auto;">
+    @foreach (Task2.Models.Product product in ViewBag.Products)
+    {
+        <div style="display: inline-block; width: max-content; padding: 10px; margin: 10px; border: 2px solid black; border-radius: 5px;">
+            <h1>@product.Name</h1>
+            <p>Price: @product.Price€</p>
+            <p>Count: @product.StorageCount</p>
+            <a href="../../Admin/EditProduct?id=@product.Id">Edit</a>
+            <a href="../../Admin/DeleteProduct?id=@product.Id">Delete</a>
+        </div>
+    }
+    @if (ViewBag.Products.Count == 0)
+    {
+        <h1>Nothing founded</h1>
+    }
+</div>

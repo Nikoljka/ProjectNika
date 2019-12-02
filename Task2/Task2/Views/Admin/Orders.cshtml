@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Orders";
+}
+
+<h2>Orders</h2>
+<table border="1" style="border-collapse: collapse">
+    <tr>
+        <th style="padding: 5px;">User</th>
+        <th style="padding: 5px;">Product</th>
+        <th style="padding: 5px;">Product price</th>
+        <th style="padding: 5px;">Product count</th>
+        <th style="padding: 5px;">Full price</th>
+        <th style="padding: 5px;">Order time</th>
+    </tr>
+    @foreach (Task2.Models.Order order in ViewBag.Orders)
+    {
+        Task2.Models.Product product = ((List<Task2.Models.Product>)ViewBag.Products).FirstOrDefault(x => x.Id == order.ProductId);
+        Task2.Models.User user = ((List<Task2.Models.User>)ViewBag.Users).FirstOrDefault(x => x.Id == order.UserId);
+        <tr>
+            @if (product != null)
+            {
+                <td style="padding: 5px;">@user.Email</td>
+                <td style="padding: 5px;">@product.Name</td>
+                <td style="padding: 5px;">@product.Price€</td>
+                <td style="padding: 5px;">@order.ProductCount</td>
+                <td style="padding: 5px;">@(order.ProductCount * product.Price)€</td>
+                <td style="padding: 5px;">@order.OrderTime.ToString("dd-MM-yyyy hh:mm")</td>
+            }
+            else
+            {
+                <td style="padding: 5px;">@user.Email</td>
+                <td style="padding: 5px;">Id: @order.Id</td>
+                <td style="padding: 5px;">Unknown</td>
+                <td style="padding: 5px;">@order.ProductCount</td>
+                <td style="padding: 5px;">Unknown</td>
+                <td style="padding: 5px;">@order.OrderTime.ToString("dd-MM-yyyy hh:mm")</td>
+            }
+        </tr>
+    }
+</table>

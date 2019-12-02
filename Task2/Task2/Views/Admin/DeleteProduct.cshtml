@@ -1,0 +1,15 @@
+﻿@model Task2.Models.Product 
+
+@{
+    ViewBag.Title = "DeleteProduct";
+}
+
+<form action="?" method="post">
+    @Html.HiddenFor(model => model.Id)
+    <h2>Delete Product</h2>
+    <h3>Name: @Model.Name</h3>
+    <h3>Price: @Model.Price€</h3>
+    <h3>Storage count: @Model.StorageCount</h3>
+    <input type="submit" value="Delete" />
+    <a href="../../Admin/Products">Back</a>
+</form>
