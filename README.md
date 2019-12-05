@@ -93,3 +93,6 @@ Xml файл должен содержать id, kogus, arve, telija, kuupäev
 
 
 <a href="https://ibb.co/85dd6tb"><img src="https://i.ibb.co/MVGGMQf/GCXVep2bv0o.jpg" alt="GCXVep2bv0o" border="0"></a>
+
+
+<a href="https://ibb.co/cQjSQqG"><img src="https://i.ibb.co/XtqrtHh/H-iva.png" alt="H-iva" border="0"></a><br /><a target='_blank' href='https://imgbb.com/'>free pic upload</a><br />
